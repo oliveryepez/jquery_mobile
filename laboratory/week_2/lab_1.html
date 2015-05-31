@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+
+	function printHeadings(){
+			
+		var html, i;
+		for (i =1; i <= 6; i++){
+			html = html + "<h" + i + "> Heading " + i + "</h" + i + ">";
+		};
+
+		document.getElementById("headings").innerHTML = html;
+	}
+
+	</script>
+</head>
+<body>
+	<p>Click the button to loop from 1 to 6, to make HTML headings</p>
+	<input type="button" value="Try it" onclick="printHeadings();">
+	<div id="headings"></div>
+</body>
+</html>

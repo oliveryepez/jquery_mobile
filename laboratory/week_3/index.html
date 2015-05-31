@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" type="text/css" href="jquery_mobile/jquery.mobile-1.4.5.css">
+		<script type="text/javascript" src="jquery/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="jquery_mobile/jquery.mobile-1.4.5.min.js"></script>
+	</head>
+	<body>
+
+		<!-- First Page -->
+		<div data-role="page" id="home" data-title="Home" data-theme="a">
+			<div data-role="header" class="header">
+				<h1>Wellcome Page #1</h1>
+			</div>
+			<div data-role="content">
+				<ul data-role="listview" data=inset="true" data-filter="true" data-theme="c">
+					<li><a href="#cadillac" data-role="button" data-transition="slide">Acura</a></li>
+					<li><a href="#">Audi</a></li>
+					<li><a href="#">BMW</a></li>
+					<li><a href="#">Cadillac</a></li>
+					<li><a href="#">Ferrari</a></li>
+				</ul>
+				<a href="#contact-us" data-role="button" data-transition="slide">Contact Us </a>
+				<a href="#about-us" data-role="button" data-transition="slide">About Us </a>
+			</div>
+			<div data-role="footer">
+				<h4>Page Footer</h4>
+			</div>
+		</div>
+		<!-- End First Page -->
+
+		<!-- Second Page -->
+		<div data-role="page" id="contact-us" data-title="Contact" data-theme="d">
+			<div data-role="header">
+				<h1>Wellcome Page #2</h1>
+			</div>
+			<div data-role="content">
+				<p>CONTACT US CONTENT</p>
+				<a href="#home" data-role="button" data-transition="slide" data-direction="reverse">Back to Home</a>
+			</div>
+			<div data-role="footer">
+				<h4>Page Footer</h4>
+			</div>
+		</div>
+			<!-- End Second Page -->
+
+		<!-- Third Page -->
+		<div data-role="page" id="about-us" data-title="About us" data-theme="b">
+			<div data-role="header">
+				<h1>Wellcome Page #3</h1>
+			</div>
+			<div data-role="content" data-theme="c">
+				<p>ABOUT US CONTENT</p>
+				<a href="#home" data-role="button" data-transition="slide" data-direction="reverse">Back to Home</a>
+			</div>
+			<div data-role="footer">
+				<h4>Page Footer</h4>
+			</div>
+			<!-- End Third Page -->
+		</div>
+		<!-- Third Page -->
+		<div data-role="page" id="cadillac" data-title="About us" data-theme="c">
+			<div data-role="header">
+				<h1>CADILLAC CAR</h1>
+			</div>
+			<div data-role="content">
+				<form>
+					<label for="slider-O">Input Slider: </label>
+					<input type="range" name="slider" id="slider-O" value="25" min="0" max="100"/>
+					<a href="#" data-role="button" data-icon="star">Star Button</a>
+				</form>
+				<a href="#home" data-role="button" data-transition="slide" data-direction="reverse">Back to Home</a>
+			</div>
+			<div data-role="footer">
+				<h4>Page Footer</h4>
+			</div>
+			<!-- End Third Page -->
+		</div>
+	</body>
+</html>

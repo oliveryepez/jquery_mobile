@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" type="text/css" href="jquery_mobile/jquery.mobile-1.4.5.css">
+		<link rel="stylesheet" type="text/css" href="styles/styles.css">
+		<script type="text/javascript" src="jquery/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="jquery_mobile/jquery.mobile-1.4.5.min.js"></script>
+
+		<script type="text/javascript">
+		
+			function Number(val){
+			
+
+				if(document.getElementById("txtOperation").value.length > 0){
+					 document.getElementById("txtOperation").value += val;
+				}else{
+					 document.getElementById("txtOperation").value = val;
+				}
+			}
+
+			function Operator(val){
+				document.getElementById("txtOperation").value += val;
+			}
+
+			function Clear(){
+				document.getElementById("txtOperation").value = "";
+			}
+
+			function Result(){
+				try{
+					document.getElementById("txtOperation").value = eval(document.getElementById("txtOperation").value);
+				}catch(e){
+					Number('ERROR')
+				}
+			}
+
+		</script>
+	</head>
+	<body>
+		<div data-role="page" id="home" data-theme="b">
+			<div data-role="header">
+				<h1>Main Menu</h1>
+			</div>
+			<div data-role="content">
+				<a href="#picture" data-role="button" data-transition="slide">Show Picture</a>
+				<a href="#calculator" data-role="button" data-transition="slide">Calculator</a>
+				<a href="#list" data-role="button" data-transition="slide">Car List</a>
+			</div>
+			<div data-role="footer">
+				<h5>&copy Copyright. All Right Reserved</h5>
+			</div>
+		</div>
+
+		<div data-role="page" id="picture" data-theme="b">
+			<div data-role="header">
+				<h1>Images Example</h1>
+			</div>
+			<div data-role="content">
+				<img src="assets/img.jpg" width="350" height="250">
+				<a href="#home" data-role="button" data-transition="slide" data-direction="reverse">Back to Home</a>
+			</div>
+			<div data-role="footer">
+				<h5>&copy Copyright. All Right Reserved</h5>
+			</div>
+		</div>
+
+		<div data-role="page" id="calculator" data-theme="b">
+			<div data-role="header">
+				<h1>Calculator Example</h1>
+			</div>
+			<div data-role="content">
+				<input type="text" id="txtOperation" data-theme="a" align="bottom" class="operation">
+				<div class="container">
+					<a href="#" data-role="button" onclick="Number(7)">7</a>
+					<a href="#" data-role="button" onclick="Number(4)">4</a>
+					<a href="#" data-role="button" onclick="Number(1)">1</a>
+					<a href="#" data-role="button" onclick="Number(.)">.</a>
+				</div>
+				<div class="container">
+					<a href="#" data-role="button" onclick="Number(8)">8</a>
+					<a href="#" data-role="button" onclick="Number(5)">5</a>
+					<a href="#" data-role="button" onclick="Number(2)">2</a>
+					<a href="#" data-role="button" onclick="Number(0)">0</a>
+				</div>
+				<div class="container">
+					<a href="#" data-role="button" onclick="Number(9)">9</a>
+					<a href="#" data-role="button" onclick="Number(6)">6</a>
+					<a href="#" data-role="button" onclick="Number(3)">3</a>
+					<a href="#" data-role="button" onclick="Result()">=</a>
+				</div>
+				<div class="container">
+					<a href="#" data-role="button" data-theme="a" onclick="Operator('/')">/</a>
+					<a href="#" data-role="button" data-theme="a" onclick="Operator('*')">X</a>
+					<a href="#" data-role="button" data-theme="a" onclick="Operator('-')">-</a>
+					<a href="#" data-role="button" data-theme="a" onclick="Operator('+')">+</a>
+				</div>
+				<a href="#home" data-role="button" data-transition="slide" data-direction="reverse">Back to Home</a>
+			</div>
+			<div data-role="footer">
+				<h5>&copy Copyright. All Right Reserved</h5>
+			</div>
+		</div>
+		<div data-role="page" id="list" data-theme="b">
+			<div data-role="header">
+				<h1>ListView Example</h1>
+			</div>
+			<div data-role="content">
+				<ul data-role="listview" data=inset="true" data-filter="true">
+					<li><a href="#imageAcura" data-transition="slide">Acura</a></li>
+					<li><a href="#imageAudi" data-transition="slide">Audi</a></li>
+					<li><a href="#imageBmw" data-transition="slide">BMW</a></li>
+					<li><a href="#imageCadillac" data-transition="slide">Cadillac</a></li>
+					<li><a href="#imageFerrari" data-transition="slide">Ferrari</a></li>
+				</ul>
+				<a href="#home" data-role="button" data-transition="slide" data-direction="reverse">Back to Home</a>
+			</div>
+			<div data-role="footer">
+				<h5>&copy Copyright. All Right Reserved</h5>
+			</div>
+		</div>
+
+		<div data-role="page" id="imageAcura" data-theme="b">
+			<div data-role="header">
+				<h1>Acura Car!</h1>
+			</div>
+			<div data-role="content">
+				<img src="assets/acura.jpg"  width="700" height="300">
+				<a href="#home" data-role="button" data-transition="slide" data-direction="reverse">Back to Cars!</a>
+			</div>
+			<div data-role="footer">
+				<h5>&copy Copyright. All Right Reserved</h5>
+			</div>
+		</div>
+
+		<div data-role="page" id="imageAudi" data-theme="b">
+			<div data-role="header">
+				<h1>Audi Car!</h1>
+			</div>
+			<div data-role="content">
+				<img src="assets/audi.jpg" width="700" height="300">
+				<a href="#home" data-role="button" data-transition="slide" data-direction="reverse">Back to Cars!</a>
+			</div>
+			<div data-role="footer">
+				<h5>&copy Copyright. All Right Reserved</h5>
+			</div>
+		</div>
+
+		<div data-role="page" id="imageBmw" data-theme="b">
+			<div data-role="header">
+				<h1>BMW Car!</h1>
+			</div>
+			<div data-role="content">
+				<img src="assets/bmw.jpg"  width="700" height="300">
+				<a href="#home" data-role="button" data-transition="slide" data-direction="reverse">Back to Cars!</a>
+			</div>
+			<div data-role="footer">
+				<h5>&copy Copyright. All Right Reserved</h5>
+			</div>
+		</div>
+
+		<div data-role="page" id="imageCadillac" data-theme="b">
+			<div data-role="header">
+				<h1>Cadillac Car!</h1>
+			</div>
+			<div data-role="content">
+				<img src="assets/cadillac.jpg" width="700" height="300">
+				<a href="#home" data-role="button" data-transition="slide" data-direction="reverse">Back to Cars!</a>
+			</div>
+			<div data-role="footer">
+				<h5>&copy Copyright. All Right Reserved</h5>
+			</div>
+		</div>
+
+		<div data-role="page" id="imageFerrari" data-theme="b">
+			<div data-role="header">
+				<h1>Ferrari Car!</h1>
+			</div>
+			<div data-role="content">
+				<img src="assets/ferrari.jpg"  width="700" height="300">
+				<a href="#home" data-role="button" data-transition="slide" data-direction="reverse">Back to Cars!</a>
+			</div>
+			<div data-role="footer">
+				<h5>&copy Copyright. All Right Reserved</h5>
+			</div>
+		</div>
+	</body>
+</html>

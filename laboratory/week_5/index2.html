@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<link rel="stylesheet" type="text/css" href="jquery_mobile/jquery.mobile-1.4.5.css">
+	<script type="text/javascript" src="jquery/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="jquery_mobile/jquery.mobile-1.4.5.js"></script>
+<head>
+</head>
+<body>
+	<div data-role="page" id="home" data-fullscreen="true">
+		<div data-role="header" data-position="fixed">
+			<h3>Home</h3>
+		</div>
+		<div data-role="content">
+		</div>
+		<div data-role="footer" data-position="fixed" class="tabbar" data-id="main-tabbar">
+			<div data-role="navbar" class="tabbar">
+				<ul>
+					<li><a href="#home" data-icon="home" data-transition="slide" class="ui-btn-active ui-state-persist">Home</a></li>
+					<li><a href="#movies" data-icon="star" data-transition="slide" class="ui-btn-inactive">Movies</a></li>
+					<li><a href="#theatres" data-icon="grid" data-transition="slide" class="ui-btn-inactive">Theatres</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="movies" data-fullscreen="true">
+		<div data-role="header" data-position="fixed">
+			<h3>Movies</h3>
+		</div>
+		<div data-role="content">
+		</div>
+		<div data-role="footer" data-position="fixed" class="tabbar" data-id="main-tabbar">
+			<div data-role="navbar" class="tabbar">
+				<ul>
+					<li><a href="#home" data-icon="home" data-transition="slide" class="ui-btn-inactive">Home</a></li>
+					<li><a href="#movies" data-icon="star" data-transition="slide" class="ui-btn-active ui-state-persist">Movies</a></li>
+					<li><a href="#theatres" data-icon="grid" data-transition="slide" class="ui-btn-inactive">Theatres</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="theatres" data-fullscreen="true">
+		<div data-role="header" data-position="fixed">
+			<h3>Theatres</h3>
+		</div>
+		<div data-role="content">
+		</div>
+		<div data-role="footer" data-position="fixed" class="tabbar" data-id="main-tabbar">
+			<div data-role="navbar" class="tabbar">
+				<ul>
+					<li><a href="#home" data-icon="home" data-transition="slide" class="ui-btn-inactive">Home</a></li>
+					<li><a href="#movies" data-icon="star" data-transition="slide" class="ui-btn-inactive">Movies</a></li>
+					<li><a href="#theatres" data-icon="grid" data-transition="slide" class="ui-btn-active ui-state-persist">Theatres</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

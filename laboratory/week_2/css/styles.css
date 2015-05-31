@@ -1,0 +1,68 @@
+
+
+/* ***** Lab #3 ******/
+
+	h1{
+		color: blue;
+	}
+
+	h2{
+		color:purple;
+	}
+
+	h3{
+		color: green;
+	}
+	p{
+		color: red;
+	}
+	#red{
+		color: red;
+	}
+	#green{
+		color: green;
+	}
+	#bold{
+		font-weight: bold;
+	}
+
+
+
+/* ***** Lab #4 ******/
+
+	.showboxbox{
+		float: left;
+		width: 100px;
+		border: 2px solid green;
+		margin: 4em 1em;
+		text-align: center;
+		padding: 30px 0;
+		
+	}
+
+
+	#box{
+		background-color: #fc3;
+		-webkit-transition: all 1s easein-out;
+		 transition: all 1s easein-out;
+	}
+
+	.box:hover{
+		background: #fc3;
+		-webkit-transform: rotate(360deg) scale(2);
+		transform:rotate(360deg) scale(2);
+	}
+
+	.slideright:hover{
+		-webkit-transform:translate(3em, 0);
+	};
+
+	.rotate:hover{
+		-webkit-transform: rotate (30deg);
+	}
+	.sliderleft:hover{
+		-webkit-transform:translate(-3em, 1em);
+	}
+	.scale:hover{
+		-webkit-transform:scale(2);
+	};
